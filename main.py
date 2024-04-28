@@ -66,3 +66,16 @@ def total_complete_cycles():
         else:
             i += 1
     return cycle_count
+
+def mistake_calculation():
+    mistakes = 0
+    for i in range(len(red_values)):
+        if (red_values[i] == 1 and (yellow_values[i] == 1 or green_values[i] == 1)):
+            mistakes += 1
+        elif (yellow_values[i] == 1 and (red_values[i] == 1 or green_values[i] == 1)):
+            mistakes += 1
+        elif (green_values[i] == 1 and (red_values[i] == 1 or yellow_values[i] == 1)):
+            mistakes += 1
+        elif (red_values[i] == 0 and yellow_values[i] == 0 and green_values[i] == 0):
+            mistakes += 1
+    return mistakes
