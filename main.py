@@ -79,3 +79,9 @@ def mistake_calculation():
         elif (red_values[i] == 0 and yellow_values[i] == 0 and green_values[i] == 0):
             mistakes += 1
     return mistakes
+
+#print(f'There are {light_occurrence()[0]} red light, {light_occurrence()[1]} yellow light and {light_occurrence()[2]} green light occurrences')
+#print(f'Red light was active for {total_active_time()[0]} seconds, yellow for {total_active_time()[1]} seconds and green for {total_active_time()[2]} seconds')
+#print(f'Timestamps when green light was active are: {green_atcive_timestamps()}')
+#print(f'There are a total of {total_complete_cycles()} cycles completed')
+#print(f'There are a total of {mistake_calculation()} mistakes')
