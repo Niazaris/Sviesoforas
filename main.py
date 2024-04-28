@@ -1,5 +1,3 @@
-import math
-
 with open("data.txt", "r") as file:
     lines = file.readlines()
 
@@ -51,3 +49,20 @@ def green_atcive_timestamps():
         if green_values[i] == 1:
             green_timestamps.append(time_values[i])
     return green_timestamps
+
+def total_complete_cycles():
+    cycle_count = 0
+    i = 0
+    while i < len(red_values) - 4:
+        if (
+            red_values[i] == 1
+            and yellow_values[i + 1] == 1
+            and green_values[i + 2] == 1
+            and yellow_values[i + 3] == 1
+            and red_values[i + 4] == 1
+        ):
+            cycle_count += 1
+            i += 5  
+        else:
+            i += 1
+    return cycle_count
