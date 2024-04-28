@@ -32,3 +32,15 @@ def light_occurrence():
             green_occurrence += 1
     return red_occurrence, yellow_occurrence, green_occurrence
 
+def total_active_time():
+    red_time = 0
+    yellow_time = 0
+    green_time = 0
+    for i in range(len(red_values)):
+        if red_values[i] == 1:
+            red_time += time_active_values[i]
+        if yellow_values[i] == 1:
+            yellow_time += time_active_values[i]
+        if green_values[i] == 1:
+            green_time += time_active_values[i]
+    return red_time, yellow_time, green_time
