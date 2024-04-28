@@ -44,3 +44,10 @@ def total_active_time():
         if green_values[i] == 1:
             green_time += time_active_values[i]
     return red_time, yellow_time, green_time
+
+def green_atcive_timestamps():
+    green_timestamps = []
+    for i in range(len(green_values)):
+        if green_values[i] == 1:
+            green_timestamps.append(time_values[i])
+    return green_timestamps
