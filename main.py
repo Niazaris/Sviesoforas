@@ -57,6 +57,7 @@ class TrafficLight:
             else:
                 i += 1
         return cycle_count
+    
     def mistake_calculation(self):
         mistakes = sum(1 for red, yellow, green in zip(self.red_values, self.yellow_values, self.green_values) if
                        (red + yellow + green != 1))
